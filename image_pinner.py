@@ -57,7 +57,7 @@ def generate_image(image_path: str, cols: int = 3, rows: int = 2):
             create_shortcut(str(BASE_PATH / tile_path / f"{' ' * spaces}_" / f"{' ' * spaces}.vbs"), str(image_pinner_folder / f"{' ' * spaces}_" / f"{' ' * spaces}.lnk"), str(tile_folder / "VisualElements" / f"ico{' ' * spaces}.ico"))
 
             with open(tile_folder / f"{' ' * spaces}.vbs", "w") as f:
-                f.write(f'Set objShell = CreateObject("WScript.Shell")\nobjShell.Run "\"{BASE_PATH / tile_path / "orig.png"}\""')
+                f.write(f'Set objShell = CreateObject("WScript.Shell")\nobjShell.Run """{BASE_PATH / tile_path / "orig.png"}"""')
 
             with open(tile_folder / f"{' ' * spaces}.VisualElementsManifest.xml", "w") as f:
                 f.write(f'''<?xml version="1.0" encoding="utf-8"?>
